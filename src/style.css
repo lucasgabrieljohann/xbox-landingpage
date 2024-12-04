@@ -213,7 +213,39 @@ header button {
 
 .questions li {
   border-bottom: 1px solid #2e2e2e;
-  padding: 2.2rem 0;
+  padding: 1.8rem 0;
+}
+
+.questions li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.questions .dropdown-toggle i {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+
+  transition: color 0.5s ease;
+}
+
+.questions .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+.questions .dropdown-content.active {
+  max-height: 80rem; /* Valor alto suficiente para caber o conteúdo */
+  padding-top: 1.2rem;
+}
+
+.questions li div {
+  cursor: pointer;
 }
 
 footer {
